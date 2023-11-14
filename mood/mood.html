@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memories</title>
+    <style>
+     
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: peachpuff;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+            color: rgb(2, 2, 3);
+        }
+
+        .container {
+            max-width: 900px;
+            height: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .media {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .media-item {
+            margin: 50px 0;
+            width: calc(20% - 20px);
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .media-item img,
+        .media-item video {
+            max-width: 100%;
+            max-height: 100%;
+            width: 500px;
+            height: 500px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                max-width: 100%;
+                padding: 40px;
+            }
+
+            .media-item {
+                width: 100%;
+            }
+        }
+
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 800px;
+        height: auto;
+    }
+
+    .close {
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 10;
+    }
+    </style>
+     <script>
+        function openFullscreen(imageUrl) {
+            var modal = document.getElementById("fullscreen-modal");
+            var modalImg = document.getElementById("fullscreen-image");
+            modal.style.display = "block";
+            modalImg.src = imageUrl;
+        }
+
+        function closeFullscreen() {
+            var modal = document.getElementById("fullscreen-modal");
+            modal.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <h1>Memories with Bou🖤</h1>
+    <div class="container">
+        <div class="media">
+            <div class="media-item">
+                <img src="Snapchat-916367416.jpg" alt="Image 1">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-1704839116.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="IMG_20231004_201940.jpg" alt="Image 2">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-135399877.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="IMG_20231005_031600.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-216781310.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <video src="VID-20230921-WA0012.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-2127677310.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-2045631042.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1949250539.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230101-WA0125.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230402-WA0061.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230419-WA0039.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-408259297.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-545726654.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230426-WA0004.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-900896235.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230426-WA0006.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230426-WA0007.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-1137855365.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230905-WA0022.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230905-WA0027.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230905-WA0028.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230905-WA0030.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="VID-20230825-WA0033.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="IMG-20230905-WA0042.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20231016-WA0023.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20231016-WA0024.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG-20231016-WA0025.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="VID-20230804-WA0108.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="IMG-20231016-WA0027.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="IMG20231004163035.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-28230397.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-41583078.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-2090537814.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-1381804258.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-250544140.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-268626969.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-405301452.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-648190208.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-663075926.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-673098839.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-675135958.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-827041340.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-1834241901.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-827697080.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-844492143.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1051900020.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1128070393.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1136922827.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1141636472.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-1951284820.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1322343369.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-673098839.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1436973814.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1619533285.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1676499307.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <video src="Snapchat-2080032594.mp4" controls></video>
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1797007334.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="Snapchat-1810753856.jpg" alt="Image 3">
+            </div>
+        </div>
+        <div id="fullscreen-modal" class="modal">
+            <span class="close" onclick="closeFullscreen()">&times;</span>
+            <img id="fullscreen-image" class="modal-content" alt="Fullscreen Image">
+        </div>
+    </div>
+    <script>
+        // Add this for each media item
+        var mediaItems = document.getElementsByClassName("media-item");
+        Array.from(mediaItems).forEach(function (mediaItem) {
+            mediaItem.onclick = function () {
+                var imageUrl = mediaItem.querySelector("img").src;
+                openFullscreen(imageUrl);
+            };
+        });
+    
+        function openFullscreen(imageUrl) {
+            var modal = document.getElementById("fullscreen-modal");
+            var modalImg = document.getElementById("fullscreen-image");
+            modal.style.display = "block";
+            modalImg.src = imageUrl;
+        }
+    
+        function closeFullscreen() {
+            var modal = document.getElementById("fullscreen-modal");
+            modal.style.display = "none";
+        }
+    </script>
+    
+</body>
+</html>
